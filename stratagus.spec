@@ -1,25 +1,22 @@
 #
 # TODO:
 #   - devel package (?)
-#   - pl texts
-#   - fix group
 #   - fix brs
 #
 Summary:	Free cross-platform real-time strategy gaming engine
-#Summary(pl):	-
+Summary(pl):	Darmowy, wieloplatformowy silnik gier strategicznych czasu rzeczywistego
 Name:		stratagus
 Version:	2.1
 Release:	0.1
 Epoch:		0
 License:	GPL
-Group:		-
-######		Unknown group!
+Group:		Applications/Games
 Vendor:		Stratagus Team
-#Icon:		-
-Source0:	http://dl.sf.net/%{name}/%{name}-%{version}-src.tar.gz
+Source0:	http://dl.sourceforge.net/stratagus/%{name}-%{version}-src.tar.gz
 # Source0-md5:	ff6b2070b66e8847eeed6bedc24ad8bb
 Patch0:		%{name}-includepaths.patch
 URL:		http://stratagus.sourceforge.net/
+BuildRequires:	XFree86-devel
 BuildRequires:	bzip2-devel
 BuildRequires:	flac-devel
 BuildRequires:	glibc-devel
@@ -29,7 +26,6 @@ BuildRequires:	libpng-devel
 BuildRequires:	libvorbis-devel
 BuildRequires:	linux-libc-headers
 BuildRequires:	lua50-devel
-BuildRequires:	XFree86-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -43,7 +39,15 @@ engine.
 
 It is highly active in development and usage.
 
-#%%description -l pl
+%description -l pl
+Stratagus to darmowy, wieloplatformowy silnik gier strategicznych
+czasu rzeczywistego. Zawiera obs³ugê grania przez internet lub w sieci
+lokalnej, oraz grania przeciwko komputerowi. Silnik jest
+konfigurowalny i mo¿e byæ u¿ywany do tworzenia gier o wielu cechach
+specyficznych dla naszych potrzeb. Aktualna lista gier u¿ywaj±cych
+silnika stratagus znajduje siê na stronie "data sets".
+
+Projekt jest bardzo aktywny pod wzglêdem rozwoju i wykorzystania.
 
 %prep
 %setup -q -n %{name}-040702
@@ -69,7 +73,7 @@ It is highly active in development and usage.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
-install stratagus $RPM_BUILD_ROOT%{_bindir}/
+install stratagus $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
