@@ -1,0 +1,16 @@
+diff -ur stratagus-040702-orig/src/include/script.h stratagus-040702/src/include/script.h
+--- stratagus-040702-orig/src/include/script.h	2004-04-21 11:46:27.000000000 +0200
++++ stratagus-040702/src/include/script.h	2004-07-11 03:47:51.019023288 +0200
+@@ -37,9 +37,9 @@
+ --  Includes
+ ----------------------------------------------------------------------------*/
+ 
+-#include "lua.h"
+-#include "lauxlib.h"
+-#include "lualib.h"
++#include <lua50/lua.h>
++#include <lua50/lauxlib.h>
++#include <lua50/lualib.h>
+ 
+ typedef struct _lua_user_data_ {
+ 	int Type;
