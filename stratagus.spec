@@ -1,4 +1,7 @@
 #
+# TODO:
+# - OpenGL into seperate package (game doesnt works compiled --with-opengl
+#   on non opengl supported)
 #
 Summary:	Free cross-platform real-time strategy gaming engine
 Summary(pl):	Darmowy, wieloplatformowy silnik gier strategicznych czasu rzeczywistego
@@ -55,7 +58,6 @@ Projekt jest bardzo aktywny pod wzglêdem rozwoju i wykorzystania.
 #%%{__aclocal}
 #%%{__autoconf}
 %configure \
-	--with-opengl \
 	--with-x \
 	--with-bzip2 \
 	--with-ogg \
