@@ -17,6 +17,7 @@ Source0:	http://dl.sourceforge.net/stratagus/%{name}-%{version}-src.tar.gz
 Patch0:		%{name}-includepaths.patch
 URL:		http://stratagus.sourceforge.net/
 BuildRequires:	XFree86-devel
+BuildRequires:	SDL-devel
 BuildRequires:	bzip2-devel
 BuildRequires:	flac-devel
 BuildRequires:	glibc-devel
