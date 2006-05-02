@@ -20,7 +20,6 @@ BuildRequires:	XFree86-devel
 BuildRequires:	SDL-devel
 BuildRequires:	bzip2-devel
 BuildRequires:	flac-devel
-BuildRequires:	glibc-devel
 BuildRequires:	libmad-devel
 BuildRequires:	libmikmod-devel
 BuildRequires:	libpng-devel
