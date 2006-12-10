@@ -1,16 +1,15 @@
-diff -ur stratagus-040702-orig/src/include/script.h stratagus-040702/src/include/script.h
---- stratagus-040702-orig/src/include/script.h	2004-04-21 11:46:27.000000000 +0200
-+++ stratagus-040702/src/include/script.h	2004-07-11 03:47:51.019023288 +0200
-@@ -37,9 +37,9 @@
- --  Includes
- ----------------------------------------------------------------------------*/
- 
+--- stratagus-061209/src/include/script.h~	2006-12-10 11:23:52.000000000 +0100
++++ stratagus-061209/src/include/script.h	2006-12-10 11:25:29.000000000 +0100
+@@ -40,9 +40,9 @@
+ #ifdef __cplusplus
+ extern "C" {
+ #endif
 -#include "lua.h"
 -#include "lauxlib.h"
 -#include "lualib.h"
 +#include <lua50/lua.h>
 +#include <lua50/lauxlib.h>
 +#include <lua50/lualib.h>
- 
- typedef struct _lua_user_data_ {
- 	int Type;
+ #ifdef __cplusplus
+ }
+ #endif
