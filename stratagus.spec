@@ -11,8 +11,8 @@ Release:	1
 License:	GPL v2+
 Group:		Applications/Games/Strategy
 Vendor:		Stratagus Team
-Source0:	http://dl.sourceforge.net/stratagus/%{name}-061209-src.tar.gz
-# Source0-md5:	ed5f51413481668fe5047d2be77bbd88
+Source0:	http://dl.sourceforge.net/stratagus/%{name}-%{version}-src.tar.gz
+# Source0-md5:	f7c898f0468d37de9261fbe924a43546
 Patch0:		%{name}-includepaths.patch
 URL:		http://stratagus.sourceforge.net/
 BuildRequires:	XFree86-devel
@@ -49,7 +49,7 @@ silnika stratagus znajduje siê na stronie "data sets".
 Projekt jest bardzo aktywny pod wzglêdem rozwoju i wykorzystania.
 
 %prep
-%setup -q -n %{name}-061209
+%setup -q
 %patch0 -p1
 
 %build
