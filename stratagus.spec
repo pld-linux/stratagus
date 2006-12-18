@@ -6,7 +6,7 @@
 Summary:	Free cross-platform real-time strategy gaming engine
 Summary(pl):	Darmowy, wieloplatformowy silnik gier strategicznych czasu rzeczywistego
 Name:		stratagus
-Version:	2.2
+Version:	2.2.1
 Release:	1
 License:	GPL v2+
 Group:		Applications/Games/Strategy
