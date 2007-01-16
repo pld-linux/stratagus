@@ -6,13 +6,13 @@
 Summary:	Free cross-platform real-time strategy gaming engine
 Summary(pl):	Darmowy, wieloplatformowy silnik gier strategicznych czasu rzeczywistego
 Name:		stratagus
-Version:	2.2.1
+Version:	2.2.2
 Release:	1
 License:	GPL v2+
 Group:		Applications/Games/Strategy
 Vendor:		Stratagus Team
 Source0:	http://dl.sourceforge.net/stratagus/%{name}-%{version}-src.tar.gz
-# Source0-md5:	f7c898f0468d37de9261fbe924a43546
+# Source0-md5:	0e116a9d4080dbca6dad78b7d34fec8f
 Patch0:		%{name}-includepaths.patch
 URL:		http://stratagus.sourceforge.net/
 BuildRequires:	XFree86-devel
@@ -53,8 +53,6 @@ Projekt jest bardzo aktywny pod wzglêdem rozwoju i wykorzystania.
 %patch0 -p1
 
 %build
-#%%{__aclocal}
-#%%{__autoconf}
 %configure \
 	--with-x \
 	--with-bzip2 \
@@ -64,7 +62,6 @@ Projekt jest bardzo aktywny pod wzglêdem rozwoju i wykorzystania.
 	--with-flac \
 	--with-cdaudio=sdlcd \
 	--with-lua
-#cdaudio: libcda,sdlcd,cdda,no
 %{__make}
 
 %install
