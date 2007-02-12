@@ -4,7 +4,7 @@
 #   on non opengl supported)
 #
 Summary:	Free cross-platform real-time strategy gaming engine
-Summary(pl.UTF-8):   Darmowy, wieloplatformowy silnik gier strategicznych czasu rzeczywistego
+Summary(pl.UTF-8):	Darmowy, wieloplatformowy silnik gier strategicznych czasu rzeczywistego
 Name:		stratagus
 Version:	2.2.2
 Release:	1
