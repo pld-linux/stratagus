@@ -4,7 +4,7 @@
 #   on non opengl supported)
 #
 Summary:	Free cross-platform real-time strategy gaming engine
-Summary(pl):	Darmowy, wieloplatformowy silnik gier strategicznych czasu rzeczywistego
+Summary(pl.UTF-8):   Darmowy, wieloplatformowy silnik gier strategicznych czasu rzeczywistego
 Name:		stratagus
 Version:	2.2.2
 Release:	1
@@ -38,15 +38,15 @@ engine.
 
 It is highly active in development and usage.
 
-%description -l pl
+%description -l pl.UTF-8
 Stratagus to darmowy, wieloplatformowy silnik gier strategicznych
-czasu rzeczywistego. Zawiera obs³ugê grania przez internet lub w sieci
+czasu rzeczywistego. Zawiera obsÅ‚ugÄ™ grania przez internet lub w sieci
 lokalnej, oraz grania przeciwko komputerowi. Silnik jest
-konfigurowalny i mo¿e byæ u¿ywany do tworzenia gier o wielu cechach
-specyficznych dla naszych potrzeb. Aktualna lista gier u¿ywaj±cych
-silnika stratagus znajduje siê na stronie "data sets".
+konfigurowalny i moÅ¼e byÄ‡ uÅ¼ywany do tworzenia gier o wielu cechach
+specyficznych dla naszych potrzeb. Aktualna lista gier uÅ¼ywajÄ…cych
+silnika stratagus znajduje siÄ™ na stronie "data sets".
 
-Projekt jest bardzo aktywny pod wzglêdem rozwoju i wykorzystania.
+Projekt jest bardzo aktywny pod wzglÄ™dem rozwoju i wykorzystania.
 
 %prep
 %setup -q
