@@ -1,5 +1,5 @@
---- stratagus-061209/src/include/script.h~	2006-12-10 11:23:52.000000000 +0100
-+++ stratagus-061209/src/include/script.h	2006-12-10 11:25:29.000000000 +0100
+--- stratagus-2.2.4/src/include/script.h~	2007-06-22 12:25:16.000000000 +0200
++++ stratagus-2.2.4/src/include/script.h	2007-06-22 12:26:19.000000000 +0200
 @@ -40,9 +40,9 @@
  #ifdef __cplusplus
  extern "C" {
