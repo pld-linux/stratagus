@@ -26,6 +26,7 @@ BuildRequires:	libvorbis-devel
 BuildRequires:	linux-libc-headers
 BuildRequires:	lua50-devel
 BuildRequires:	zlib-devel
+Obsoletes:	freecraft
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
