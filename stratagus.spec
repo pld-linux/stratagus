@@ -64,9 +64,7 @@ Projekt jest bardzo aktywny pod względem rozwoju i wykorzystania.
 	--with-cdaudio=sdlcd \
 	--with-lua
 
-%{__make} -j1 \
-	OPTFLAGS="%{rpmcxxflags}" \
-	NLDFLAGS="%{rpmldflags}"
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
