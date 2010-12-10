@@ -6,12 +6,12 @@
 Summary:	Free cross-platform real-time strategy gaming engine
 Summary(pl.UTF-8):	Darmowy, wieloplatformowy silnik gier strategicznych czasu rzeczywistego
 Name:		stratagus
-Version:	2.2.5.4
+Version:	2.2.5.5
 Release:	1
 License:	GPL v2+
 Group:		Applications/Games
-Source0:	http://launchpad.net/stratagus/trunk/2.2.5.4/+download/%{name}_%{version}.orig.tar.gz
-# Source0-md5:	7d51718e6db118c95cb10bc28befa673
+Source0:	http://launchpad.net/stratagus/trunk/%{version}/+download/%{name}_%{version}.orig.tar.gz
+# Source0-md5:	046befa41e564e5156def4ef44decdce
 URL:		https://launchpad.net/stratagus/
 BuildRequires:	SDL-devel
 BuildRequires:	autoconf
@@ -63,13 +63,13 @@ Projekt jest bardzo aktywny pod względem rozwoju i wykorzystania.
 	--with-flac \
 	--with-cdaudio=sdlcd \
 	--with-lua
-%{__make}
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
-install stratagus $RPM_BUILD_ROOT%{_bindir}
+cp -a stratagus $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
