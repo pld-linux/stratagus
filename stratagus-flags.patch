@@ -1,6 +1,15 @@
 --- stratagus-2.2.5.5/Makefile~	2010-11-20 12:24:07.000000000 +0100
-+++ stratagus-2.2.5.5/Makefile	2010-12-10 16:14:51.353532334 +0100
-@@ -73,7 +73,7 @@
++++ stratagus-2.2.5.5/Makefile	2010-12-10 16:29:17.486865668 +0100
+@@ -63,6 +63,8 @@
+ SRC_ALL = $(SRC)
+ OBJ_ALL = $(OBJ)
+ 
++LIBS=$(LDFLAGS)
++
+ .SUFFIXES: .cpp .o
+ 
+ .PHONY:	make-objdir all-src
+@@ -73,7 +75,7 @@
  	@mkdir -p $(dir $(OBJ))
  
  %.o: $(@D)../%.cpp $(RULESFILE)
@@ -9,12 +18,12 @@
  
  help:
  	@-echo "make cycle			clean,depend,tags,all"
-@@ -102,14 +102,14 @@
+@@ -102,14 +104,14 @@
  all-src: make-objdir $(OBJ)
  
  stratagus: $(OBJ) 
 -	$(CXX) -o $(OUTFILE) $^ $(CXXFLAGS) $(LDFLAGS)
-+	$(CXX) $(OPTFLAGS) $(CXXFLAGS) -o $(OUTFILE) $^ $(LDFLAGS)
++	$(CXX) $(OPTFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $(OUTFILE) $^ $(LIBS)
  
  strip:
  	@if [ -f $(OUTFILE) ]; then $(STRIP) $(OUTFILE); fi
