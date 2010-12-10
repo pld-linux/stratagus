@@ -14,7 +14,7 @@
  
  stratagus: $(OBJ) 
 -	$(CXX) -o $(OUTFILE) $^ $(CXXFLAGS) $(LDFLAGS)
-+	$(CXX) $(OPTFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $(OUTFILE) $^ $(LDFLAGS)
++	$(CXX) $(OPTFLAGS) $(CXXFLAGS) -o $(OUTFILE) $^ $(LDFLAGS)
  
  strip:
  	@if [ -f $(OUTFILE) ]; then $(STRIP) $(OUTFILE); fi
