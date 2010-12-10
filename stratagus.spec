@@ -12,6 +12,7 @@ License:	GPL v2+
 Group:		Applications/Games
 Source0:	http://launchpad.net/stratagus/trunk/%{version}/+download/%{name}_%{version}.orig.tar.gz
 # Source0-md5:	046befa41e564e5156def4ef44decdce
+Patch0:		%{name}-flags.patch
 URL:		https://launchpad.net/stratagus/
 BuildRequires:	SDL-devel
 BuildRequires:	autoconf
@@ -49,6 +50,7 @@ Projekt jest bardzo aktywny pod względem rozwoju i wykorzystania.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__aclocal}
@@ -63,7 +65,10 @@ Projekt jest bardzo aktywny pod względem rozwoju i wykorzystania.
 	--with-flac \
 	--with-cdaudio=sdlcd \
 	--with-lua
-%{__make} -j1
+
+%{__make} -j1 \
+	OPTFLAGS="%{rpmcxxflags}" \
+	LDFLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT

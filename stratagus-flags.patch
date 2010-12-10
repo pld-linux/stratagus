@@ -1,0 +1,28 @@
+--- stratagus-2.2.5.5/Makefile~	2010-11-20 12:24:07.000000000 +0100
++++ stratagus-2.2.5.5/Makefile	2010-12-10 16:14:51.353532334 +0100
+@@ -73,7 +73,7 @@
+ 	@mkdir -p $(dir $(OBJ))
+ 
+ %.o: $(@D)../%.cpp $(RULESFILE)
+-	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS) $(subst $(OBJDIR)/../,,$<) -o $@
++	$(CXX) -c $(OPTFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(subst $(OBJDIR)/../,,$<) -o $@
+ 
+ help:
+ 	@-echo "make cycle			clean,depend,tags,all"
+@@ -102,14 +102,14 @@
+ all-src: make-objdir $(OBJ)
+ 
+ stratagus: $(OBJ) 
+-	$(CXX) -o $(OUTFILE) $^ $(CXXFLAGS) $(LDFLAGS)
++	$(CXX) $(OPTFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $(OUTFILE) $^ $(LDFLAGS)
+ 
+ strip:
+ 	@if [ -f $(OUTFILE) ]; then $(STRIP) $(OUTFILE); fi
+ 
+ src/$(OBJDIR)/stratagusrc.o: src/stratagus.rc
+ 	if [ ! -d src/$(OBJDIR) ]; then mkdir src/$(OBJDIR); fi
+-	cd src; $(WINDRES) $(CPPFLAGS) -o $(OBJDIR)/stratagusrc.o stratagus.rc; cd ..
++	cd src; $(WINDRES) $(OPTFLAGS) $(CPPFLAGS) -o $(OBJDIR)/stratagusrc.o stratagus.rc; cd ..
+ 
+ clean::
+ 	$(RM) -r $(OBJ)
